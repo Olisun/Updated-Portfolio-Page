@@ -1,0 +1,23 @@
+#scroll-button {
+  display: none;
+  position: fixed;
+}
+
+#scroll-button:hover {
+  cursor: pointer;
+}
+
+#portfolio-container {
+  background-color: aqua;
+}
+
+#gify-img, #train-img, #trivia-img, #github-img {
+  height: 200px;
+  width: 200px;
+  padding: 40px;
+}
+
+#hideGify, #hideTrain, #hideTrivia {
+  display: none;
+  margin: auto;
+}
