@@ -20,7 +20,7 @@
 <body style="background-image: url(assets/images/background.png); background-size: 600px 600px">
   <div class="container" style="width: 60%">
     <div class="jumbotron">
-      <h1 class="display-4">Hello, world!</h1>
+      <h1 class="display-10">Learning to build applications for solving problems is what gets me out of bed in the morning!</h1>
     </div>
     <br>
     <button id="scroll-button" style="display: none;">Back to te Top</button>
@@ -30,50 +30,200 @@
       <h3>About Me</h3>
       <div class="card">
         <img src="assets/images/github.jpeg" class="card-img-top" id="github-img">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        <div class="card-body" style="height: 300px;">
+          <h5 class="card-title"></h5>
+          <p class="card-text">I am currently retired after a twenty year professional career in financial services. My specialization was centered around instututional trading operations and technology. After a four and half year personal sabbatical, I made the decision
+            to pursue a second career in web developement.I have long been fascinated with all things tech. Particularly hardware (laptops and mobile devices). I'm a devote Apple consumer and I'm deep into their echo system. It wasn't until about this
+            time last year that I started poking around under the hood. Meaning I wanted to understand how all the software I use works. This led to my decision to learn web and application developement. My passions are running; my Labrador Retreiver
+            Taylor; running with Taylor and playing the guitar. I am quickly developing a fourth passion and that is learning to code.
+          </p>
         </div>
       </div>
       <h3>Portfolio</h3>
       <div id=portfolio-container>
+        <p>Featured Projects</p>
+        <div id="featured-projects">
+          <div id="gify-container">
+            <p id="gify">GifTastic</p>
+            <img src="assets/images/gify.png " id="gify-img">
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Details</button>
+            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalCenterTitle">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  </div>
+                  <div class="modal-body">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates neque eius eum aut laudantium iste et beatae eos quidem a deserunt explicabo, accusantium aliquam hic magnam obcaecati odit blanditiis accusamus?</p>
 
-        <img src="assets/images/gify.png" id="gify-img">
-        <p id="hideGify">This is my gify project</p>
-
-        <img src="assets/images/train.png" id="train-img">
-        <p id="hideTrain">This is my train project</p>
-
-        <img src="assets/images/trivia.png" id="trivia-img">
-        <p id="hideTrivia">This is my trivia project</p>
+                    <a href="https://github.com/Olisun/GifTastic">Link to Github Repo</a>
+                    <br>
+                    <a href="https://olisun.github.io/GifTastic/index.html">Link to Github Deployed Site</a>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <p id="train">Train-Schedules</p>
+            <img src="assets/images/train.png " id="train-img">
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Details</button>
+            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalCenterTitle">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  </div>
+                  <div class="modal-body">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates neque eius eum aut laudantium iste et beatae eos quidem a deserunt explicabo, accusantium aliquam hic magnam obcaecati odit blanditiis accusamus?</p>
+                    <br>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut delectus, eius ea rem, pariatur harum ducimus voluptatibus velit inventore dolor esse expedita, aperiam qui. Exercitationem eaque praesentium vel quidem beatae? Lorem ipsum
+                      dolor sit amet consectetur adipisicing elit. Aut delectus, eius ea rem, pariatur harum ducimus voluptatibus velit inventore dolor esse expedita, aperiam qui. Exercitationem eaque praesentium vel quidem beatae? Lorem ipsum dolor sit
+                      amet consectetur adipisicing elit. Aut delectus, eius ea rem, pariatur harum ducimus voluptatibus velit inventore dolor esse expedita, aperiam qui. Exercitationem eaque praesentium vel quidem beatae? Lorem ipsum dolor sit amet consectetur
+                      adipisicing elit. Aut delectus, eius ea rem, pariatur harum ducimus voluptatibus velit inventore dolor esse expedita, aperiam qui. Exercitationem eaque praesentium vel quidem beatae?</p>
+                    <a href="https://github.com/Olisun/Train-Schedules">Link to Github Repo</a>
+                    <br>
+                    <a href="https://olisun.github.io/Train-Schedules/index.html">Link to Github Deployed Site</a>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <p id="trivia">Trivia Game</p>
+            <img src="assets/images/trivia.png " id="trivia-img">
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Details</button>
+            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalCenterTitle">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  </div>
+                  <div class="modal-body">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates neque eius eum aut laudantium iste et beatae eos quidem a deserunt explicabo, accusantium aliquam hic magnam obcaecati odit blanditiis accusamus?</p>
+                    <br>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut delectus, eius ea rem, pariatur harum ducimus voluptatibus velit inventore dolor esse expedita, aperiam qui. Exercitationem eaque praesentium vel quidem beatae? Lorem ipsum
+                      dolor sit amet consectetur adipisicing elit. Aut delectus, eius ea rem, pariatur harum ducimus voluptatibus velit inventore dolor esse expedita, aperiam qui. Exercitationem eaque praesentium vel quidem beatae? Lorem ipsum dolor sit
+                      amet consectetur adipisicing elit. Aut delectus, eius ea rem, pariatur harum ducimus voluptatibus velit inventore dolor esse expedita, aperiam qui. Exercitationem eaque praesentium vel quidem beatae? Lorem ipsum dolor sit amet consectetur
+                      adipisicing elit. Aut delectus, eius ea rem, pariatur harum ducimus voluptatibus velit inventore dolor esse expedita, aperiam qui. Exercitationem eaque praesentium vel quidem beatae?</p>
+                    <a href="https://github.com/Olisun/GifTastic">Link to Github Repo</a>
+                    <br>
+                    <a href="https://olisun.github.io/GifTastic/index.html">Link to Github Deployed Site</a>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <p>Other Projects</p>
+          <table class="table table-striped ">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Project Title</th>
+                <th scope="col">GitHub Repo Link</th>
+                <th scope="col">GitHub Deployed Link</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>HW-Wireframe (Redo)</td>
+                <td> <a href="https://github.com/Olisun/HW-Wireframe-Redo" target="blank ">https://github.com/Olisun/HW-Wireframe-Redo</a></td>
+                <td> <a href="https://olisun.github.io/HW-Wireframe-Redo/" target="blank ">https://olisun.github.io/HW-Wireframe-Redo/</a></td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Psyhcic Game</td>
+                <td>
+                  <a href="https://github.com/Olisun/Psychic-Game" target="blank ">https://github.com/Olisun/Psychic-Game</a>
+                </td>
+                <td>
+                  <a href="https://olisun.github.io/Psychic-Game/assets/index.html" target="blank ">https://olisun.github.io/Psychic-Game/assets/index.html</a>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>Word Guess Game</td>
+                <td>
+                  <a href="https://github.com/Olisun/Word-Guess-Game" target="blank ">https://github.com/Olisun/Word-Guess-Game</a>
+                </td>
+                <td>
+                  <a href="https://olisun.github.io/Word-Guess-Game/assets/index.html" target="blank ">https://olisun.github.io/Word-Guess-Game/assets/index.html</a>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">4</th>
+                <td>Unit-4-Game (Crystals Collector)</td>
+                <td>
+                  <a href="https://github.com/Olisun/unit-4-game" target="blank ">https://github.com/Olisun/unit-4-game</a>
+                </td>
+                <td>
+                  <a href="https://olisun.github.io/unit-4-game/index.html" target="blank ">https://olisun.github.io/unit-4-game/index.html</a>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">5</th>
+                <td>Basic Portfolio</td>
+                <td>
+                  <a href="https://github.com/Olisun/Basic-Portfolio-New" target="blank ">https://github.com/Olisun/Basic-Portfolio-New</a>
+                </td>
+                <td>
+                  <a href="https://olisun.github.io/Basic-Portfolio-New/" target="blank ">https://olisun.github.io/Basic-Portfolio-New/</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
+
+
       <h3>Contact</h3>
       <div>
-        <form action="mailto:olisun@mac.com">
-          <div class="form-group">
-            <label for="exampleInputEmail1">Email address</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-          </div>
-          <div class="form-group">
-            <label for="exampleFormControlTextarea1">Example textarea</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
+        <table class="table">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col"></th>
+              <th scope="col">Email</th>
+              <th scope="col">Mobile</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>
+                <a href="mailto: olisun@mac.com">olisun@mac.com</a>
+              </td>
+              <td>(415) 967-8626</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
+
     </div>
-  </div>
 
 
 
 
 
 
-  <!-- my JavaScript -->
-  <script type="text/javascript " src="assets/javascript/index.js "></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!-- my JavaScript -->
+    <script type="text/javascript " src="assets/javascript/index.js "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js " integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1 " crossorigin="anonymous "></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js " integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM " crossorigin="anonymous "></script>
 
 </body>
 
