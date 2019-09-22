@@ -24,8 +24,7 @@ $(document).ready(function() {
     $('.display-10').animate({ color: 'rgba(206, 25, 25, 1);', opacity: '1' }, 'slow');
     $('.display-10').animate({ color: 'rgba(32, 32, 172, 1);', opacity: '1' }, 'slow');
     $('.display-10').animate({ color: 'rgba(255, 255, 255, 1);', opacity: '1' }, 'slow');
-
-  }, 1000);
+  }, 500);
 
 
   // setInterval(function() {
