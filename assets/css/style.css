@@ -14,18 +14,63 @@
   border-radius: 4px;
 }
 
+.jumbotron {
+  height: 200px;
+  margin-bottom: -10px;
+  background: rgba(23, 23, 23, 1);
+  color: rgba(255, 255, 255, 1);
+  text-align: center;
+  font-family: Monaco, 'Courier New', monospace;
+  /* animation: pulse 3s infinite; */
+  animation-duration: 5s;
+}
+
+@keyframes pulse {
+  0% {
+    background-color: black;
+    color: white;
+    font-size: 13px;
+  }
+  100% {
+    background-color: white;
+    color: black;
+    font-size: 20px;
+  }
+}
+
 #scroll-button:hover {
   cursor: pointer;
 }
 
+#accordion {
+  margin-bottom: 60px;
+}
+
 #accordion .ui-accordion-content {
-  max-height: 450px;
+  max-height: 470px;
+  background-color: rgba(150, 150, 151, 1);
+}
+
+#about-me, #portfolio, #contact {
+  color: rgba(255, 255, 255, 1);
+  font-family: Monaco, 'Courier New', monospace;
 }
 
 .display-10 {
   font-family: Monaco, 'Courier New', monospace;
   font-size: 24px;
+  /* animation: pulse 5s; */
 }
+
+
+/* @keyframes pulse {
+  0% {
+    font-size: 13px;
+  }
+  100% {
+    font-size: 24px;
+  }
+} */
 
 .card-img-top {
   /* float: left; */
@@ -54,16 +99,41 @@
   display: block;
 }
 
-#gify-img, #train-img, #trivia-img, #github-img {
-  height: 200px;
-  width: 200px;
-  padding: 40px;
+#gify-modal-header, #train-modal-title, #trivia-modal-title {
+  font-family: Monaco, 'Courier New', monospace;
+  font-size: 18px;
 }
 
-#train-img2 {
-  height: 400px;
-  width: 400px;
-  padding: 40px;
+#gify-modal-body, #train-modal-body, #trivia-modal-body {
+  font-family: Monaco, 'Courier New', monospace;
+  font-size: 13px;
+  border-radius: 50%;
+}
+
+#gify-modal-button, #train-modal-button, #trivia-modal-button {
+  background-color: blueviolet;
+  font-family: Monaco, 'Courier New', monospace;
+  font-size: 13px;
+}
+
+#close-modal-one, #close-modal-two, #close-modal-three {
+  background-color: blueviolet;
+  font-family: Monaco, 'Courier New', monospace;
+  font-size: 13px;
+}
+
+#gify-title, #train-title, #trivia-title {
+  margin-left: 30px;
+}
+
+#gify-img, #train-img, #trivia-img, #github-img {
+  height: 160px;
+  width: 160px;
+  margin-left: 60px;
+  margin-top: 15px;
+  margin-bottom: 30px;
+  border: 5px solid rgba(74, 0, 140, 1);
+  outline: 5px ridge rgba(32, 32, 172, 1);
 }
 
 #gify, #train, #trivia {

@@ -21,5 +21,13 @@ $(document).ready(function() {
 
   $('#accordion').accordion();
 
+  $('.ui-accordion-header').css('background', 'rgba(32, 32, 172, 1)');
 
+
+
+  // $('.display-10').effect('linear', 'slow')
+
+  // $( "#toggle" ).effect( "size", {
+  //   to: { width: 200, height: 60 }
+  // }, 1000 );
 });

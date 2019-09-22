@@ -11,8 +11,11 @@
   <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
   <script src="//code.jquery.com/jquery-1.12.4.js"></script>
   <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <!-- my CSS -->
   <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/style.scss">
 
   <title>Updated Portfolio</title>
 </head>
@@ -24,10 +27,10 @@
     </div>
     <br>
     <button id="scroll-button" style="display: none;">Back to te Top</button>
-    <a href="https://github.com/Olisun?tab=repositories" target="blank" class="badge badge-primary">GitHub</a>
-    <a href="https://www.linkedin.com/in/oliver-sun-4b6baba/" target="blank" class="badge badge-secondary">Linkedin</a>
+    <!-- Main Accordian Container -->
     <div id="accordion">
-      <h3>About Me</h3>
+      <!-- Accordian Content Box 1 (About Me) -->
+      <h3 class="ui-accordion-header" id="about-me">About Me</h3>
       <div class="card">
         <img src="assets/images/github.jpeg" class="card-img-top" id="github-img">
         <div class="card-body" style="height: 300px;">
@@ -39,22 +42,23 @@
           </p>
         </div>
       </div>
-      <h3>Portfolio</h3>
+      <!-- Accordian Content Box 2 (Portfolio) -->
+      <h3 class="ui-accordion-header" id="portfolio">Portfolio</h3>
       <div id=portfolio-container>
         <p>Featured Projects</p>
         <div id="featured-projects">
           <div id="gify-container">
-            <p id="gify">GifTastic</p>
+            <p id="gify-title">GifTastic</p>
             <img src="assets/images/gify.png " id="gify-img">
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#gifyModal">Details</button>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#gifyModal" id="gify-modal-button" style="display: block; margin-left: 70px;">Details</button>
             <div class="modal fade" id="gifyModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
               <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                   <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalCenterTitle">GifTastic</h5>
+                    <h5 class="modal-title" id="gify-modal-header">GifTastic</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                   </div>
-                  <div class="modal-body">
+                  <div class="modal-body" id="gify-modal-body">
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates neque eius eum aut laudantium iste et beatae eos quidem a deserunt explicabo, accusantium aliquam hic magnam obcaecati odit blanditiis accusamus?</p>
 
                     <a href="https://github.com/Olisun/GifTastic" target="blank">Link to GifTastic Github Repo</a>
@@ -62,24 +66,24 @@
                     <a href="https://olisun.github.io/GifTastic/index.html" target="blank">Link to Github Deployed Site</a>
                   </div>
                   <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button id="close-modal-one" type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                   </div>
                 </div>
               </div>
             </div>
           </div>
           <div>
-            <p id="train">Train-Schedules</p>
+            <p id="train-title">Train-Schedules</p>
             <img src="assets/images/train.png " id="train-img">
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#trainModal">Details</button>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#trainModal" id="train-modal-button" style="display: block; margin-left: 70px;">Details</button>
             <div class="modal fade" id="trainModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
               <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                   <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalCenterTitle">Train-Schedules</h5>
+                    <h5 class="modal-title" id="train-modal-title">Train-Schedules</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                   </div>
-                  <div class="modal-body">
+                  <div class="modal-body" id="train-modal-body">
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates neque eius eum aut laudantium iste et beatae eos quidem a deserunt explicabo, accusantium aliquam hic magnam obcaecati odit blanditiis accusamus?</p>
                     <br>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut delectus, eius ea rem, pariatur harum ducimus voluptatibus velit inventore dolor esse expedita, aperiam qui. Exercitationem eaque praesentium vel quidem beatae? Lorem ipsum
@@ -92,24 +96,24 @@
                     <a href="https://olisun.github.io/Train-Schedules/index.html" target="blank">Link to Github Deployed Site</a>
                   </div>
                   <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button id="close-modal-two" type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                   </div>
                 </div>
               </div>
             </div>
           </div>
           <div>
-            <p id="trivia">Trivia Game</p>
+            <p id="trivia-title">Trivia Game</p>
             <img src="assets/images/trivia.png " id="trivia-img">
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#triviaModal">Details</button>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#triviaModal" id="trivia-modal-button" style="display: block;margin-left: 70px;">Details</button>
             <div class="modal fade" id="triviaModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
               <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                   <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalCenterTitle">Trivia Game</h5>
+                    <h5 class="modal-title" id="trivia-modal-title">Trivia Game</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                   </div>
-                  <div class="modal-body">
+                  <div class="modal-body" id="trivia-modal-body">
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates neque eius eum aut laudantium iste et beatae eos quidem a deserunt explicabo, accusantium aliquam hic magnam obcaecati odit blanditiis accusamus?</p>
                     <br>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut delectus, eius ea rem, pariatur harum ducimus voluptatibus velit inventore dolor esse expedita, aperiam qui. Exercitationem eaque praesentium vel quidem beatae? Lorem ipsum
@@ -121,7 +125,7 @@
                     <a href="https://olisun.github.io/TriviaGame/index.html" target="blank">Link to Github Deployed Site</a>
                   </div>
                   <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button id="close-modal-three" type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                   </div>
                 </div>
               </div>
@@ -190,28 +194,27 @@
           </table>
         </div>
       </div>
-
-
-      <h3>Contact</h3>
+      <!-- Accordian Content Box 3 (Contact) -->
+      <h3 class="ui-accordion-header" id="contact">Contact <i class="fa fa-mobile-phone" style="font-size: 32px;color:red"></i> <i class="fa fa-envelope" style="font-size: 30px;color:red"></i> <i class="fa fa-github" style="font-size: 30px; color: rgba(206, 25, 25, 1);"></i> <i class="fa fa-linkedin-square"
+          style="font-size: 30px; color: rgba(206, 25, 25, 1);"></i></h3>
       <div>
-        <table class="table">
-          <thead class="thead-dark">
-            <tr>
-              <th scope="col"></th>
-              <th scope="col">Email</th>
-              <th scope="col">Mobile</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td>
-                <a href="mailto: olisun@mac.com">olisun@mac.com</a>
-              </td>
-              <td>(415) 967-8626</td>
-            </tr>
-          </tbody>
-        </table>
+        <h1>fa fa-github</h1>
+
+        <i class="fa fa-github"></i>
+        <i class="fa fa-github" style="font-size:24px"></i>
+        <i class="fa fa-github" style="font-size:36px"></i>
+        <i class="fa fa-github" style="font-size:48px;color:red"></i>
+        <br>
+
+        <p>Used on a button:</p>
+        <button style="font-size:24px">Button <i class="fa fa-github"></i></button>
+
+        <p>Unicode:</p>
+        <i style="font-size:24px" class="fa">&#xf09b;</i>
+
+        <a href="https://github.com/Olisun?tab=repositories" target="blank" class="badge badge-primary">GitHub</a>
+        <a href="https://www.linkedin.com/in/oliver-sun-4b6baba/" target="blank" class="badge badge-secondary">Linkedin</a>
+
       </div>
 
     </div>
@@ -220,11 +223,10 @@
 
 
 
-
-    <!-- my JavaScript -->
-    <script type="text/javascript " src="assets/javascript/index.js "></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js " integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1 " crossorigin="anonymous "></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js " integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM " crossorigin="anonymous "></script>
+    < <!-- my JavaScript -->
+      <script type="text/javascript " src="assets/javascript/index.js "></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js " integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1 " crossorigin="anonymous "></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js " integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM " crossorigin="anonymous "></script>
 
 </body>
 
