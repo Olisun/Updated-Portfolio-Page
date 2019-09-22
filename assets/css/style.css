@@ -14,6 +14,10 @@
   border-radius: 4px;
 }
 
+.container {
+  width: 70%;
+}
+
 .jumbotron {
   height: 200px;
   margin-bottom: -10px;
@@ -21,21 +25,6 @@
   color: rgba(255, 255, 255, 1);
   text-align: center;
   font-family: Monaco, 'Courier New', monospace;
-  /* animation: pulse 3s infinite; */
-  animation-duration: 5s;
-}
-
-@keyframes pulse {
-  0% {
-    background-color: black;
-    color: white;
-    font-size: 13px;
-  }
-  100% {
-    background-color: white;
-    color: black;
-    font-size: 20px;
-  }
 }
 
 #scroll-button:hover {
@@ -59,18 +48,7 @@
 .display-10 {
   font-family: Monaco, 'Courier New', monospace;
   font-size: 24px;
-  /* animation: pulse 5s; */
 }
-
-
-/* @keyframes pulse {
-  0% {
-    font-size: 13px;
-  }
-  100% {
-    font-size: 24px;
-  }
-} */
 
 .card-img-top {
   /* float: left; */
@@ -144,4 +122,37 @@
 table {
   font-family: Monaco, 'Courier New', monospace;
   font-size: 13px;
+}
+
+@media screen and (max-width: 960px) {
+  body {
+    margin: auto;
+    width: 576px;
+  }
+  .container {
+    width: 100%;
+    font-family: Monaco, 'Courier New', monospace;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    margin: auto;
+    width: 576px;
+  }
+  .container {
+    width: 100%;
+    font-family: Monaco, 'Courier New', monospace;
+  }
+}
+
+@media screen and (max-width: 573px) {
+  body {
+    margin: auto;
+    width: 576px;
+  }
+  .container {
+    width: 100%;
+    font-family: Monaco, 'Courier New', monospace;
+  }
 }
