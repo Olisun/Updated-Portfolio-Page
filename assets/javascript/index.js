@@ -1,6 +1,5 @@
 $(document).ready(function() {
   // This calls on jQuery's built-in accordian method and activates the accordian's actions.
-
   $('#accordion').accordion();
   // Adding background color to the accordian header. 
   $('.ui-accordion-header').css('background', 'rgba(32, 32, 172, 1)');
