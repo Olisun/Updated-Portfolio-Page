@@ -1,40 +1,17 @@
 $(document).ready(function() {
   // This calls on jQuery's built-in accordian method and activates the accordian's actions.
+
   $('#accordion').accordion();
   // Adding background color to the accordian header. 
   $('.ui-accordion-header').css('background', 'rgba(32, 32, 172, 1)');
 
+  // This function creates the animation in the jumbotron. Been playing around with jQuery's animation capabilities.
   setTimeout(function() {
-    $('.display-10').animate({ fontSize: '0px', color: 'rgba(255, 255, 255, 1);', opacity: '0.0' }, 'fast');
-    $('.display-10').animate({ fontSize: '2px', color: 'rgba(255, 255, 255, 1);', opacity: '0.1' }, 'fast');
-    $('.display-10').animate({ fontSize: '4px', color: 'rgba(206, 25, 25, 1);', opacity: '0.2' }, 'fast');
-    $('.display-10').animate({ fontSize: '6px', color: 'rgba(206, 25, 25, 1);', opacity: '0.3' }, 'fast');
-    $('.display-10').animate({ fontSize: '8px', color: 'rgba(255, 255, 255, 1);', opacity: '0.4' }, 'fast');
-    $('.display-10').animate({ fontSize: '10px', color: 'rgba(255, 255, 255, 1);', opacity: '0.5' }, 'fast');
-    $('.display-10').animate({ fontSize: '12px', color: 'rgba(32, 32, 172, 1);', opacity: '0.6' }, 'fast');
+    $('.jumbotron').animate({ height: '275px' }, 2000);
+    $('.display-10').animate({ fontSize: '0px', color: 'rgba(255, 255, 255, 1);', opacity: '0.0' }, 500).animate({ fontSize: '10px', color: 'rgba(32, 32, 172, 1);', opacity: '0.5' }, 500).animate({ fontSize: '20px', color: 'rgba(206, 25, 25, 1);', opacity: '1' }, 2000).animate({ fontSize: '20px', color: 'rgba(32, 32, 172, 1)', opacity: '1' }, 1000).animate({ fontSize: '20px', color: 'rgba(206, 25, 25, 1)', opacity: '1' }, 1000).animate({ fontSize: '20px', color: 'rgba(255, 255, 255, 1)', opacity: '1' }, 1000).animate({ color: 'rgba(206, 25, 25, 1);', opacity: '1' }, 2000)
+  }, 0);
 
-    $('.display-10').animate({ fontSize: '14px', color: 'rgba(32, 32, 172, 1);', opacity: '0.7' }, 'fast');
-    $('.display-10').animate({ fontSize: '16px', color: 'rgba(255, 255, 255, 1);', opacity: '0.8' }, 'fast');
-    $('.display-10').animate({ fontSize: '18px', color: 'rgba(255, 255, 255, 1);', opacity: '0.9' }, 'fast');
-    $('.display-10').animate({ fontSize: '20px', color: 'rgba(206, 25, 25, 1);', opacity: '1' }, 'fast');
-    $('.display-10').animate({ fontSize: '21px', color: 'rgba(206, 25, 25, 1);', opacity: '1' }, 'fast');
-    $('.display-10').animate({ fontSize: '22px', color: 'rgba(255, 255, 255, 1);', opacity: '1' }, 'fast');
-    $('.display-10').animate({ fontSize: '23px', color: 'rgba(255, 255, 255, 1);', opacity: '1' }, 'fast');
-    $('.display-10').animate({ fontSize: '24px', color: 'rgba(255, 255, 255, 1);', opacity: '1' }, 'fast');
-    $('.display-10').animate({ color: 'rgba(206, 25, 25, 1);', opacity: '1' }, 'slow');
-    $('.display-10').animate({ color: 'rgba(32, 32, 172, 1);', opacity: '1' }, 'slow');
-    $('.display-10').animate({ color: 'rgba(255, 255, 255, 1);', opacity: '1' }, 'slow');
-  }, 500);
-
-
-  // setInterval(function() {
-  //   $('.display-10').delay(1000).animate({ 'fontSize': '12px' }), 1000, 'swing',
-  //     function() {
-  //       $('.display-10').delay(1000).animate({ 'fontSize': '24px' }), 1000;
-  //     };
-  // }, 5000);
-
-
+  // This is a scroll button function that shows a back to top button (though it's probaably not need at the moment). I put this in at the beginning. Did some research on how to make one.
   var scrollButton = document.getElementById('scroll-button');
 
   function showScrollButton() {
@@ -54,4 +31,4 @@ $(document).ready(function() {
     document.documentElement.scrollTop = 0;
   })
 
-});
+})

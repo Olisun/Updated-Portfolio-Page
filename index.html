@@ -23,10 +23,15 @@
 <body style="background-image: url(assets/images/background.png); background-size: 600px 600px">
   <div class="container">
     <div class="jumbotron">
-      <h1 class="display-10">Learning to build applications for solving problems is what gets me out of bed in the morning!</h1>
+      <div class="display-10">
+        <p>const futureDev = { </p>
+        <p> &nbsp; name: 'Oliver Sun',</p>
+        <p> &nbsp; skills: ['HTML', 'CSS', 'Bootstrap', 'JavaScript', 'jQuery']</p>
+        <p>};</p>
+      </div>
     </div>
     <br>
-    <button id="scroll-button" style="display: none;">Back to te Top</button>
+    <button id="scroll-button" style="display: none;">Back to Top</button>
     <!-- Main Accordian Container -->
     <div id="accordion">
       <!-- Accordian Content Box 1 (About Me) -->
@@ -45,12 +50,13 @@
       <!-- Accordian Content Box 2 (Portfolio) -->
       <h3 class="ui-accordion-header" id="portfolio">Portfolio</h3>
       <div id=portfolio-container>
-        <p>Featured Projects</p>
+        <p><strong>Featured Projects:</strong></p>
+        <br>
         <div id="featured-projects">
           <div id="gify-container">
             <p id="gify-title">GifTastic</p>
             <img src="assets/images/gify.png " id="gify-img">
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#gifyModal" id="gify-modal-button" style="display: block; margin-left: 70px;">Details</button>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#gifyModal" id="gify-modal-button" style="display: block; margin-left: 90px;">Details</button>
             <div class="modal fade" id="gifyModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
               <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
@@ -73,7 +79,7 @@
           <div>
             <p id="train-title">Train-Schedules</p>
             <img src="assets/images/train.png " id="train-img">
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#trainModal" id="train-modal-button" style="display: block; margin-left: 70px;">Details</button>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#trainModal" id="train-modal-button" style="display: block; margin-left: 115px;">Details</button>
             <div class="modal fade" id="trainModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
               <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
@@ -101,7 +107,7 @@
           <div>
             <p id="trivia-title">Trivia Game</p>
             <img src="assets/images/trivia.png " id="trivia-img">
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#triviaModal" id="trivia-modal-button" style="display: block;margin-left: 70px;">Details</button>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#triviaModal" id="trivia-modal-button" style="display: block;margin-left: 120px;">Details</button>
             <div class="modal fade" id="triviaModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
               <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
@@ -128,7 +134,8 @@
           </div>
         </div>
         <div>
-          <p>Other Projects</p>
+          <br><br>
+          <p><strong>Other Projects:</strong></p>
           <table class="table table-striped ">
             <thead>
               <tr>
