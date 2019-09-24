@@ -46,7 +46,7 @@ I utilized jQuery's UI library and decided to use their accordian for dividing u
 
 I used a Bootstrap Jumbotron for the title and quickly decided that I wanted to experiment with some kind of animation effect in the jumbotron. I've never coded any animations before this project but I've seen other examples from classmates and figured I want to learn this. I found the research fun. Though the end product of the animated part might seem a little elementary now, the idea is that in a few more months when I'm ready to send out job apps, this part will be a lot more advanced.
 
-I also added some animation effects to each of the main project images. Finally I wrapped the jumbotron's animation methods in a setTimeOut function with a setInterval function nested inside. Please see the code snippets below for more details.
+I also added some animation effects to each of the main project titles. Finally I wrapped the jumbotron's animation methods in a setTimeOut function with a setInterval function nested inside. Please see the code snippets below for more details.
 
 I used a color palette from the website coolors.co. BTW, I'm horrible with matching color patterns. Just ask any girl I know and they'll tell you how I can't match colors worth bleep (mostly about fashion). I decided on a color scheme similiar to that of my VSCode editor. It's simple but to me it looks kinda neat.
 
@@ -58,14 +58,14 @@ I was able to implement Bootstrap Modals for my 3 deployed projects that I want 
 
 The one main problem I faced was trying to get the specific modal to open correctly. At first, only the first modal would open for a featured project eventhough you clicked on one of the other two. I found out how to fix this by specifying the data-target attribute. The code snippet is below.
 
-## Code Snippits I like:
+## Code Snippets I like:
 
 This fixed the bug where clicking on any modal button only took you to the first one. By adding a data attriute (exp: data-target="#gifyModal"), you can target the specific modal attached to its button.
 ```
    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#gifyModal" id="gify-modal-button" style="display: block; margin-left: 120px;">Details</button>
 ```
 
-My first Javascript animations. I used jQuery's accordian method for the main content. I created an animation effect for the jumbotron and wrapped that in a setTimeOut function with a setInterval function nested inside. I made effects for the 3 featured project images. Finally, I made a scroll button for smaller screens. I referenced jQuery's docs on animation and W3 Schools for the scroll button. The setTimeOut and setInterval functions were from previous class exercises and homework.
+My first Javascript animations. I used jQuery's accordian method for the main content. I created an animation effect for the jumbotron and wrapped that in a setTimeOut function with a setInterval function nested inside. I made effects for the 3 featured project titles (will be more creative next go-around!). Finally, I made a scroll button for smaller screens. I referenced jQuery's docs on animation and W3 Schools for the scroll button. The setTimeOut and setInterval functions were from previous class exercises and homework.
 ```
 $(document).ready(function() {
   // This calls on jQuery's built-in accordian method and activates the accordian's actions.
@@ -82,29 +82,18 @@ $(document).ready(function() {
     })
   }, 0);
 
-  // These are animations when the mouse hovers over the images of the 3 main projects. 
-  $('#trivia-img').on('mouseover', function() {
-    $('#trivia-img').animate({
-      height: '230px',
-      width: '230px'
-    }, 1000).animate({ height: '200px', width: '200px' }, 1000);
-    $('#trivia-title').animate({ color: 'rgba(206, 25, 25, 1);' }, 500).animate({ color: 'rgba(32, 32, 172, 1)' }, 500).animate({ color: 'rgba(255, 255, 255, 1)' }, 500).animate({ color: 'black' }, 500);
-  });
+  // These mouseover events changes the color of of the project title (having a creativity mid block right now...)
 
   $('#train-img').on('mouseover', function() {
-    $('#train-img').animate({
-      height: '230px',
-      width: '230px'
-    }, 1000).animate({ height: '200px', width: '200px' }, 1000);
-    $('#train-title').animate({ color: 'rgba(206, 25, 25, 1);' }, 500).animate({ color: 'rgba(32, 32, 172, 1)' }, 500).animate({ color: 'rgba(255, 255, 255, 1)' }, 500).animate({ color: 'black' }, 500);
+    $('#train-title').animate({ color: 'rgba(206, 25, 25, 1);' }, 1000).animate({ color: 'rgba(32, 32, 172, 1)' }, 1000).animate({ color: 'rgba(255, 255, 255, 1)' }, 1000).animate({ color: 'black' }, 1000);
   });
 
   $('#gify-img').on('mouseover', function() {
-    $('#gify-img').animate({
-      height: '230px',
-      width: '230px'
-    }, 1000).animate({ height: '200px', width: '200px' }, 1000);
-    $('#gify-title').animate({ color: 'rgba(206, 25, 25, 1);' }, 500).animate({ color: 'rgba(32, 32, 172, 1)' }, 500).animate({ color: 'rgba(255, 255, 255, 1)' }, 500).animate({ color: 'black' }, 500);
+    $('#gify-title').animate({ color: 'rgba(206, 25, 25, 1);' }, 1000).animate({ color: 'rgba(32, 32, 172, 1)' }, 1000).animate({ color: 'rgba(255, 255, 255, 1)' }, 1000).animate({ color: 'black' }, 1000);
+  });
+
+  $('#trivia-img').on('mouseover', function() {
+    $('#trivia-title').animate({ color: 'rgba(206, 25, 25, 1);' }, 1000).animate({ color: 'rgba(32, 32, 172, 1)' }, 1000).animate({ color: 'rgba(255, 255, 255, 1)' }, 1000).animate({ color: 'black' }, 1000);
   });
 
   // This is a scroll button function that shows a back to top button. It's mainly for use on smaller screeens.

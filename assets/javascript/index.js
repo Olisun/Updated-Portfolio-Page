@@ -13,29 +13,18 @@ $(document).ready(function() {
     })
   }, 0);
 
-  // These are animations when the mouse hovers over the images of the 3 main projects. 
-  $('#trivia-img').on('mouseover', function() {
-    $('#trivia-img').animate({
-      height: '230px',
-      width: '230px'
-    }, 1000).animate({ height: '200px', width: '200px' }, 1000);
-    $('#trivia-title').animate({ color: 'rgba(206, 25, 25, 1);' }, 500).animate({ color: 'rgba(32, 32, 172, 1)' }, 500).animate({ color: 'rgba(255, 255, 255, 1)' }, 500).animate({ color: 'black' }, 500);
-  });
+  // These mouseover events changes the color of of the project title (having a creativity mid block right now...)
 
   $('#train-img').on('mouseover', function() {
-    $('#train-img').animate({
-      height: '230px',
-      width: '230px'
-    }, 1000).animate({ height: '200px', width: '200px' }, 1000);
-    $('#train-title').animate({ color: 'rgba(206, 25, 25, 1);' }, 500).animate({ color: 'rgba(32, 32, 172, 1)' }, 500).animate({ color: 'rgba(255, 255, 255, 1)' }, 500).animate({ color: 'black' }, 500);
+    $('#train-title').animate({ color: 'rgba(206, 25, 25, 1);' }, 1000).animate({ color: 'rgba(32, 32, 172, 1)' }, 1000).animate({ color: 'rgba(255, 255, 255, 1)' }, 1000).animate({ color: 'black' }, 1000);
   });
 
   $('#gify-img').on('mouseover', function() {
-    $('#gify-img').animate({
-      height: '230px',
-      width: '230px'
-    }, 1000).animate({ height: '200px', width: '200px' }, 1000);
-    $('#gify-title').animate({ color: 'rgba(206, 25, 25, 1);' }, 500).animate({ color: 'rgba(32, 32, 172, 1)' }, 500).animate({ color: 'rgba(255, 255, 255, 1)' }, 500).animate({ color: 'black' }, 500);
+    $('#gify-title').animate({ color: 'rgba(206, 25, 25, 1);' }, 1000).animate({ color: 'rgba(32, 32, 172, 1)' }, 1000).animate({ color: 'rgba(255, 255, 255, 1)' }, 1000).animate({ color: 'black' }, 1000);
+  });
+
+  $('#trivia-img').on('mouseover', function() {
+    $('#trivia-title').animate({ color: 'rgba(206, 25, 25, 1);' }, 1000).animate({ color: 'rgba(32, 32, 172, 1)' }, 1000).animate({ color: 'rgba(255, 255, 255, 1)' }, 1000).animate({ color: 'black' }, 1000);
   });
 
   // This is a scroll button function that shows a back to top button. It's mainly for use on smaller screeens.
