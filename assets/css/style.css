@@ -35,7 +35,7 @@
 }
 
 #accordion .ui-accordion-content {
-  max-height: 470px;
+  max-height: 540px;
   background-color: rgba(150, 150, 151, 1);
 }
 
@@ -48,16 +48,6 @@
   font-family: Monaco, 'Courier New', monospace;
   text-align: left;
   padding-left: 75px;
-}
-
-.card-img-top {
-  /* float: left; */
-}
-
-.card-body {
-  /* float: right; */
-  /* width: 400px; */
-  /* height: 300px; */
 }
 
 .card-text {
@@ -81,7 +71,8 @@
 #gify-modal-body, #train-modal-body, #trivia-modal-body {
   font-family: Monaco, 'Courier New', monospace;
   font-size: 13px;
-  border-radius: 50%;
+  background-color: rgba(150, 150, 151, 1);
+  color: navy;
 }
 
 #gify-modal-button, #train-modal-button, #trivia-modal-button {
@@ -97,15 +88,15 @@
 }
 
 #gify-title {
-  margin-left: 95px;
+  margin-left: 125px;
 }
 
 #train-title {
-  margin-left: 90px;
+  margin-left: 120px;
 }
 
 #trivia-title {
-  margin-left: 110px;
+  margin-left: 140px;
 }
 
 #gify-img, #train-img, #trivia-img, #github-img {
@@ -123,15 +114,15 @@
 }
 
 #gify-img {
-  margin-left: 30px;
+  margin-left: 60px;
 }
 
 #train-img {
-  margin-left: 60px;
+  margin-left: 90px;
 }
 
 #trivia-img {
-  margin-left: 60px;
+  margin-left: 90px;
 }
 
 #contact-table {

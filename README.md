@@ -1,7 +1,10 @@
 # Updated-Portfolio-Page
 
 ## Page Previews: 
-![](assets/images/screen-shot.png)
+![](assets/images/screen-shot-1.png)
+![](assets/images/screen-shot-2.png)
+![](assets/images/screen-shot-3.png)
+![](assets/images/screen-shot-4.png)
 
 ## About the project:
 We had to redesign our previous basic portfolio page or build a new personal portfolio web page. I chose the later. The following are the basic specs:
@@ -28,35 +31,100 @@ We had to redesign our previous basic portfolio page or build a new personal por
   * HTML
   * CSS
   * Bootstrap
-  * jQuery, jQueryUI
+  * jQuery
+  * jQueryUI
   * Javascript
   * Font Awesome
   * Coolors.co
+  * Typed.js (currently working on trying to implement this)
 
 ## Methodology:
 
-I was looking foward to building a new portfolio page from scratch. This is by far, not the final-final, but at least I get to play around with ideas and practive my CSS and particularly Bootstrap. I also utilized jQuery's UI library and decided to use their accordian for dividing up my about me, portfolio and contact ssections. 
+I was looking foward to building a new portfolio page from scratch. This is by far, not the final-final, but at least I get to play around with ideas and practive my CSS and particularly Bootstrap. 
 
-I used a Bootstrap Jumbotron for the title and quickly decided that I wanted to experimwent with some kind of animation effect in the jumbotron. I've never coded any animations before this project but I've seen other examples from classmates and figured I want to learn this. I found the reserach fun. Though, the end product of the animated part might seem a little elementary now, the idea is that in a few more months when I'm ready to send out job apps, this part will be a lot more advanced.
+I utilized jQuery's UI library and decided to use their accordian for dividing up my about me, portfolio and contact sections. 
+
+I used a Bootstrap Jumbotron for the title and quickly decided that I wanted to experiment with some kind of animation effect in the jumbotron. I've never coded any animations before this project but I've seen other examples from classmates and figured I want to learn this. I found the research fun. Though the end product of the animated part might seem a little elementary now, the idea is that in a few more months when I'm ready to send out job apps, this part will be a lot more advanced.
+
+I also added some animation effects to each of the main project images. Finally I wrapped the jumbotron's animation methods in a setTimeOut function with a setInterval function nested inside. Please see the code snippets below for more details.
 
 I used a color palette from the website coolors.co. BTW, I'm horrible with matching color patterns. Just ask any girl I know and they'll tell you how I can't match colors worth bleep (mostly about fashion). I decided on a color scheme similiar to that of my VSCode editor. It's simple but to me it looks kinda neat.
 
 I used Font Awesome to get fonts for my Github and Linkedin links, as well as for my email and mobile link/phone number in the contact section. You can even click on the email icon and it will open up your email with a new mail message ready to be sent to me.
 
-Finally, I was able to implement Bootstrap Modals for my 3 deployed projects that I want to showcase. They seemed to be an affective way to create a specific and responsive content container for each.
+I was able to implement Bootstrap Modals for my 3 deployed projects that I want to showcase. They seemed to be an affective way to create a specific and responsive content container for each.
+
+## Problems That I Overcame:
+
+The one main problem I faced was trying to get the specific modal to open correctly. At first, only the first modal would open for a featured project eventhough you clicked on one of the other two. I found out how to fix this by specifying the data-target attribute. The code snippet is below.
 
 ## Code Snippits I like:
 
-My first Javascript animation. 
+This fixed the bug where clicking on any modal button only took you to the first one. By adding a data attriute (exp: data-target="#gifyModal"), you can target the specific modal attached to its button.
 ```
-// This calls on jQuery's built-in accordian method and activates the accordian's actions.
+   <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#gifyModal" id="gify-modal-button" style="display: block; margin-left: 120px;">Details</button>
+```
+
+My first Javascript animations. I used jQuery's accordian method for the main content. I created an animation effect for the jumbotron and wrapped that in a setTimeOut function with a setInterval function nested inside. I made effects for the 3 featured project images. Finally, I made a scroll button for smaller screens. I referenced jQuery's docs on animation and W3 Schools for the scroll button. The setTimeOut and setInterval functions were from previous class exercises and homework.
+```
+$(document).ready(function() {
+  // This calls on jQuery's built-in accordian method and activates the accordian's actions.
   $('#accordion').accordion();
   // Adding background color to the accordian header. 
   $('.ui-accordion-header').css('background', 'rgba(32, 32, 172, 1)');
 
-  // This function creates the animation in the jumbotron. Been playing around with jQuery's animation capabilities.
+  // This function creates the animation in the jumbotron. Been playing around with jQuery's animation capabilities. The setTimeOut starts as soon as the page loads plays only once. The setInterval continously plays, alternating colors for the text in the jumbotron.
   setTimeout(function() {
-    $('.jumbotron').animate({ height: '275px' }, 2000);
-    $('.display-10').animate({ fontSize: '0px', color: 'rgba(255, 255, 255, 1);', opacity: '0.0' }, 500).animate({ fontSize: '10px', color: 'rgba(32, 32, 172, 1);', opacity: '0.5' }, 500).animate({ fontSize: '20px', color: 'rgba(206, 25, 25, 1);', opacity: '1' }, 2000).animate({ fontSize: '20px', color: 'rgba(32, 32, 172, 1)', opacity: '1' }, 1000).animate({ fontSize: '20px', color: 'rgba(206, 25, 25, 1)', opacity: '1' }, 1000).animate({ fontSize: '20px', color: 'rgba(255, 255, 255, 1)', opacity: '1' }, 1000).animate({ color: 'rgba(206, 25, 25, 1);', opacity: '1' }, 2000)
+    $('.jumbotron').animate({ height: '250px' }, 2000);
+    $('.display-10').animate({ fontSize: '0px', color: 'rgba(255, 255, 255, 1);', opacity: '0.0' }, 500).animate({ fontSize: '10px', color: 'rgba(32, 32, 172, 1);', opacity: '0.5' }, 500).animate({ fontSize: '18px', color: 'rgba(206, 25, 25, 1);', opacity: '1' }, 2000).animate({ fontSize: '18px', color: 'rgba(32, 32, 172, 1)', opacity: '1' }, 1000).animate({ fontSize: '18px', color: 'rgba(206, 25, 25, 1)', opacity: '1' }, 1000).animate({ fontSize: '18px', color: 'rgba(255, 255, 255, 1)', opacity: '1' }, 1000).animate({ color: 'rgba(206, 25, 25, 1);', opacity: '1' }, 2000)
+    setInterval(function() {
+      $('.display-10').animate({ color: 'rgba(206, 25, 25, 1)', opacity: '1' }, 2000).animate({ color: 'rgba(255, 255, 255, 1)', opacity: '1' }, 2000).animate({ color: 'rgba(32, 32, 172, 1);', opacity: '1' }, 2000)
+    })
   }, 0);
-  ```
+
+  // These are animations when the mouse hovers over the images of the 3 main projects. 
+  $('#trivia-img').on('mouseover', function() {
+    $('#trivia-img').animate({
+      height: '230px',
+      width: '230px'
+    }, 1000).animate({ height: '200px', width: '200px' }, 1000);
+    $('#trivia-title').animate({ color: 'rgba(206, 25, 25, 1);' }, 500).animate({ color: 'rgba(32, 32, 172, 1)' }, 500).animate({ color: 'rgba(255, 255, 255, 1)' }, 500).animate({ color: 'black' }, 500);
+  });
+
+  $('#train-img').on('mouseover', function() {
+    $('#train-img').animate({
+      height: '230px',
+      width: '230px'
+    }, 1000).animate({ height: '200px', width: '200px' }, 1000);
+    $('#train-title').animate({ color: 'rgba(206, 25, 25, 1);' }, 500).animate({ color: 'rgba(32, 32, 172, 1)' }, 500).animate({ color: 'rgba(255, 255, 255, 1)' }, 500).animate({ color: 'black' }, 500);
+  });
+
+  $('#gify-img').on('mouseover', function() {
+    $('#gify-img').animate({
+      height: '230px',
+      width: '230px'
+    }, 1000).animate({ height: '200px', width: '200px' }, 1000);
+    $('#gify-title').animate({ color: 'rgba(206, 25, 25, 1);' }, 500).animate({ color: 'rgba(32, 32, 172, 1)' }, 500).animate({ color: 'rgba(255, 255, 255, 1)' }, 500).animate({ color: 'black' }, 500);
+  });
+
+  // This is a scroll button function that shows a back to top button. It's mainly for use on smaller screeens.
+  var scrollButton = document.getElementById('scroll-button');
+
+  function showScrollButton() {
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+      scrollButton.style.display = 'flex';
+    } else {
+      scrollButton.style.display = 'none';
+    };
+  };
+  window.onscroll = function() {
+    showScrollButton();
+  };
+
+  scrollButton.addEventListener('click', function() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  });
+
+});
+```
