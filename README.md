@@ -46,7 +46,7 @@ I utilized jQuery's UI library and decided to use their accordian for dividing u
 
 I used a Bootstrap Jumbotron for the title and quickly decided that I wanted to experiment with some kind of animation effect in the jumbotron. I've never coded any animations before this project but I've seen other examples from classmates and figured I want to learn this. I found the research fun. Though the end product of the animated part might seem a little elementary now, the idea is that in a few more months when I'm ready to send out job apps, this part will be a lot more advanced.
 
-I also added some animation effects to each of the main project titles. Finally I wrapped the jumbotron's animation methods in a setTimeOut function with a setInterval function nested inside. Please see the code snippets below for more details.
+I also added some animation effects to each of the main project titles. Finally I wrapped the jumbotron's animation methods in a setTimeOut function with a setInterval function nested inside. Please see the code snippets below for more details. I was also able to add the library Typed.js and use it's typewriter effect for a section of the jumbotron.
 
 I used a color palette from the website coolors.co. BTW, I'm horrible with matching color patterns. Just ask any girl I know and they'll tell you how I can't match colors worth bleep (mostly about fashion). I decided on a color scheme similiar to that of my VSCode editor. It's simple but to me it looks kinda neat.
 
