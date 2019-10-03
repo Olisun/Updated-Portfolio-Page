@@ -7,6 +7,7 @@ $(document).ready(function() {
     startDelay: 250,
     loop: true,
   });
+
   // This calls on jQuery's built-in accordian method and activates the accordian's actions.
   $('#accordion').accordion();
   // Adding background color to the accordian header. 
