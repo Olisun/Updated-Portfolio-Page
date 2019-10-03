@@ -36,7 +36,7 @@ We had to redesign our previous basic portfolio page or build a new personal por
   * Javascript
   * Font Awesome
   * Coolors.co
-  * Typed.js (currently working on trying to implement this)
+  * Typed.js
 
 ## Methodology:
 

@@ -1,8 +1,17 @@
 $(document).ready(function() {
+  // Usiing Typed.js method for typewriter effect in jumbo-tron. 
+  var typed = new Typed('#typed', {
+    stringsElement: '#typed-strings',
+    typeSpeed: 60,
+    backSpeed: 10,
+    startDelay: 250,
+    loop: true,
+  });
   // This calls on jQuery's built-in accordian method and activates the accordian's actions.
   $('#accordion').accordion();
   // Adding background color to the accordian header. 
   $('.ui-accordion-header').css('background', 'rgba(32, 32, 172, 1)');
+
 
   // This function creates the animation in the jumbotron. Been playing around with jQuery's animation capabilities. The setTimeOut starts as soon as the page loads plays only once. The setInterval continously plays, alternating colors for the text in the jumbotron.
   setTimeout(function() {
